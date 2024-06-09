@@ -5,7 +5,7 @@
 void main()
 {
     char rollNo[20], name[20], res[10], grade[10];
-    int mar, hin, eng, math, sci, soc, total;
+    int mar, hin, eng, math, sci, soc, total, p = 1;
     float avg;
 
     printf("Enter the Student Roll Number :\n"); // Inputs from user
@@ -35,45 +35,67 @@ void main()
     if (mar >= 35) // if mark is less than 35 then fail otherwise Pass
         strcpy(res, "Pass");
     else
+    {
         strcpy(res, "Fail");
+        p = 0; // For checking grade
+    }
     printf("mar     \t\t %d  \t\t\t %s\n", mar, res); // only printing
 
     if (hin >= 35) // if mark is less than 35 then fail otherwise Pass
         strcpy(res, "Pass");
     else
+    {
         strcpy(res, "Fail");
+        p = 0; // For checking grade
+    }
     printf("hin     \t\t %d  \t\t\t %s\n", hin, res); // only printing
 
     if (eng >= 35) // if mark is less than 35 then fail otherwise Pass
         strcpy(res, "Pass");
     else
+    {
         strcpy(res, "Fail");
+        p = 0; // For checking grade
+    }
     printf("eng     \t\t %d  \t\t\t %s\n", eng, res); // only printing
 
     if (math >= 35) // if mark is less than 35 then fail otherwise Pass
         strcpy(res, "Pass");
     else
+    {
         strcpy(res, "Fail");
+        p = 0; // For checking grade
+    }
     printf("math     \t\t %d  \t\t\t %s\n", math, res); // only printing
 
     if (sci >= 35) // if mark is less than 35 then fail otherwise Pass
         strcpy(res, "Pass");
     else
+    {
         strcpy(res, "Fail");
+        p = 0; // For checking grade
+    }
     printf("sci     \t\t %d  \t\t\t %s\n", sci, res); // only printing
 
     if (soc >= 35) // if mark is less than 35 then fail otherwise Pass
         strcpy(res, "Pass");
     else
+    {
         strcpy(res, "Fail");
+        p = 0; // For checking grade
+    }
     printf("soc     \t\t %d  \t\t\t %s\n", soc, res); // only printing
 
     printf("----------------------------------------------------------------------\n");
-    if (mar >= 35 && hin >= 35 && eng >= 35 && math >= 35 && sci >= 35 && soc >= 35) // If all subject mark are greater or equals to 35 then Pass otherwise fail
-        strcpy(grade, "Pass");
-    else
-        strcpy(grade, "Fail");
 
+    if (p == 0)
+        strcpy(grade, "Fail");
+    else if (avg >= 60)
+        strcpy(grade, "1st Class");
+    else if (avg >= 50)
+        strcpy(grade, "2st Class");
+    else if (avg >= 35)
+        strcpy(grade, "3st Class");
     printf("Name = %s \t Total = %d \t Avg = %.2f \t and got %s\n", name, total, avg, grade); // only printing
     printf("----------------------------------------------------------------------\n\n\n");
 }
