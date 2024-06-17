@@ -18,6 +18,6 @@ void main()
         
     } while (f>=10);
     
-    printf("First number is : %d", f);
+    printf("First number is : %d\n", f);
     printf("Last number is : %d",l);
 }
