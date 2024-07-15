@@ -1,4 +1,8 @@
 {
   "cSpell.words": ["Ganesh", "Shreyas", "strlwr", "Subhash", "Swapnil"],
-  "C_Cpp.errorSquiggles": "disabled"
+  "C_Cpp.errorSquiggles": "disabled",
+  "files.associations": {
+    "*.c": "c",
+    "stdio.h": "c"
+  }
 }
